@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details - CarZone</title>
+  <meta name="description" content="View full specs, gallery, and EMI calculator for this car on CarZone.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:title" content="Car Details - CarZone">
+  <meta property="og:description" content="View full specs, gallery, and EMI calculator for this car.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Car<span>Zone</span></a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &gt;
+    <a href="cars.html">Cars</a> &gt;
+    <span id="breadcrumbCurrent">Car Details</span>
+  </div>
+
+  <!-- ===== CAR DETAILS MAIN SECTION ===== -->
+  <!-- Everything below is filled dynamically by car-details.js based on the car ID in the URL -->
+  <section class="details-page" id="detailsPage">
+
+    <!-- ===== IMAGE GALLERY ===== -->
+    <div class="gallery">
+      <img id="mainImage" src="" alt="Car main image" class="main-image">
+      <div class="thumbnail-row" id="thumbnailRow">
+        <!-- Thumbnails injected by JS -->
+      </div>
+    </div>
+
+    <!-- ===== CAR INFO ===== -->
+    <div class="details-info">
+      <h1 id="carTitle">Loading...</h1>
+      <p class="details-price" id="carPrice"></p>
+
+      <!-- Spec grid -->
+      <div class="specs-grid" id="specsGrid">
+        <!-- Specs injected by JS -->
+      </div>
+
+      <p class="details-description" id="carDescription"></p>
+
+      <div class="details-actions">
+        <button class="btn-primary" type="button" id="contactSellerBtn">Contact Seller</button>
+        <button class="btn-secondary" type="button" id="favoriteBtn">
+          <i class="fa-regular fa-heart"></i> Save to Favorites
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EMI CALCULATOR SECTION ===== -->
+  <section class="emi-section">
+    <h2>Loan / EMI Calculator</h2>
+    <div class="emi-calculator">
+      <div class="emi-inputs">
+        <div class="filter-group">
+          <label for="downPayment">Down Payment ($)</label>
+          <input type="number" id="downPayment" value="5000" min="0">
+        </div>
+        <div class="filter-group">
+          <label for="loanTenure">Loan Tenure (Months)</label>
+          <input type="number" id="loanTenure" value="36" min="6" max="84">
+        </div>
+        <div class="filter-group">
+          <label for="interestRate">Interest Rate (% per year)</label>
+          <input type="number" id="interestRate" value="7" min="1" max="20" step="0.1">
+        </div>
+      </div>
+
+      <div class="emi-result">
+        <p>Estimated Monthly Payment</p>
+        <h3 id="emiResult">$0</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIMILAR CARS SECTION ===== -->
+  <section class="similar-section">
+    <h2>Similar Cars</h2>
+    <div class="car-grid" id="similarCarsContainer">
+      <!-- JS will fill this -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Car<span>Zone</span></h3>
+        <p>Your trusted marketplace for buying and selling cars.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 CarZone. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== JavaScript Files ===== -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/car-details.js"></script>
+</body>
+</html>

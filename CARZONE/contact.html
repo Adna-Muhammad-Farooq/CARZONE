@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - CarZone</title>
+  <meta name="description" content="Get in touch with the CarZone team for questions about listings, buying, or selling.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:title" content="Contact Us - CarZone">
+  <meta property="og:description" content="Get in touch with the CarZone team for questions about listings, buying, or selling.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Car<span>Zone</span></a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <h1>Get In Touch</h1>
+    <p>Have a question or need help? We're here for you.</p>
+  </section>
+
+  <!-- ===== CONTACT MAIN SECTION ===== -->
+  <section class="contact-page">
+
+    <!-- ===== CONTACT INFO ===== -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p class="contact-intro">
+        Reach out to us through any of these channels, or fill out the form
+        and we'll get back to you within 24 hours.
+      </p>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h4>Address</h4>
+          <p>123 Main Street, Peshawar, Pakistan</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <h4>Phone</h4>
+          <p>+92 300 1234567</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <p>support@carzone.com</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-clock"></i>
+        <div>
+          <h4>Working Hours</h4>
+          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CONTACT FORM ===== -->
+    <div class="contact-form-wrapper">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm" novalidate>
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your name">
+          <span class="error-message" id="fullNameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+          <span class="error-message" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+          <span class="error-message" id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this about?">
+          <span class="error-message" id="subjectError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+          <span class="error-message" id="messageError"></span>
+        </div>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+
+        <!-- Success message shown after valid submission -->
+        <p class="form-success" id="formSuccess" style="display: none;">
+          <i class="fa-solid fa-circle-check"></i> Your message has been sent successfully!
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Car<span>Zone</span></h3>
+        <p>Your trusted marketplace for buying and selling cars.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 CarZone. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== JavaScript Files ===== -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

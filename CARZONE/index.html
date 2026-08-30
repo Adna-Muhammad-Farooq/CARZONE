@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarZone - Find Your Perfect Car</title>
+<meta name="description" content="Browse hundreds of new and used cars from trusted sellers on CarZone. Compare prices, filter by brand, and find your perfect car today.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:title" content="CarZone - Find Your Perfect Car">
+<meta property="og:description" content="Browse hundreds of new and used cars from trusted sellers on CarZone.">
+<meta property="og:type" content="website">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Our CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER / NAVBAR ===== -->
+<header class="header">
+    <nav class="navbar">
+    <!-- Logo -->
+    <a href="index.html" class="logo">Car<span>Zone</span></a>
+
+    <!-- Nav Links -->
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Right side: Dark mode + Hamburger -->
+    <div class="nav-right">
+        <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    </nav>
+</header>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="hero-content">
+    <h1>Find Your Dream Car <span>Today</span></h1>
+    <p>Browse hundreds of new and used cars from trusted sellers near you.</p>
+
+    <!-- Quick Search Bar -->
+    <form class="hero-search" onsubmit="return false;">
+        <input type="text" id="heroSearchInput" placeholder="Search by brand, model...">
+        <button type="submit" id="heroSearchBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </form>
+    </div>
+</section>
+
+<!-- ===== FEATURED BRANDS SECTION ===== -->
+<section class="brands-section">
+    <h2>Popular Brands</h2>
+    <div class="brands-grid">
+    <a href="cars.html?brand=Toyota" class="brand-card">Toyota</a>
+    <a href="cars.html?brand=Honda" class="brand-card">Honda</a>
+    <a href="cars.html?brand=BMW" class="brand-card">BMW</a>
+    <a href="cars.html?brand=Audi" class="brand-card">Audi</a>
+    <a href="cars.html?brand=Ford" class="brand-card">Ford</a>
+    <a href="cars.html?brand=Tesla" class="brand-card">Tesla</a>
+    </div>
+</section>
+
+<!-- ===== FEATURED CARS SECTION ===== -->
+<section class="featured-section">
+    <h2>Featured Cars</h2>
+    <!-- Cars will be injected here by JavaScript from data.js -->
+    <div class="car-grid" id="featuredCarsContainer">
+    <!-- JS will fill this -->
+    </div>
+    <div class="view-all-btn">
+    <a href="cars.html" class="btn-primary">View All Cars</a>
+    </div>
+</section>
+
+<!-- ===== WHY CHOOSE US SECTION ===== -->
+<section class="why-us-section">
+    <h2>Why Choose CarZone</h2>
+    <div class="why-us-grid">
+    <div class="why-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Verified Sellers</h3>
+        <p>Every listing is checked for authenticity and quality.</p>
+    </div>
+    <div class="why-card">
+        <i class="fa-solid fa-tags"></i>
+        <h3>Best Prices</h3>
+        <p>Compare prices across brands and find the best deal.</p>
+    </div>
+    <div class="why-card">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>Our team is available anytime to help you decide.</p>
+    </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-content">
+    <div class="footer-about">
+        <h3>Car<span>Zone</span></h3>
+        <p>Your trusted marketplace for buying and selling cars.</p>
+    </div>
+    <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 CarZone. All rights reserved.</p>
+</footer>
+
+<!-- ===== JavaScript Files ===== -->
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

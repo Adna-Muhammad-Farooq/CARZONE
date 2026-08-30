@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Cars - CarZone</title>
+  <meta name="description" content="Search and filter new and used cars by brand, fuel type, and price on CarZone.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:title" content="Browse Cars - CarZone">
+  <meta property="og:description" content="Search and filter new and used cars by brand, fuel type, and price.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Car<span>Zone</span></a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html" class="active">Cars</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <h1>Browse Our Cars</h1>
+    <p>Find the perfect car that matches your needs and budget.</p>
+  </section>
+
+  <!-- ===== CARS PAGE MAIN CONTENT ===== -->
+  <section class="cars-page">
+
+    <!-- ===== SIDEBAR FILTERS ===== -->
+    <aside class="filters-sidebar">
+      <h3>Filters</h3>
+
+      <!-- Search -->
+      <div class="filter-group">
+        <label for="searchInput">Search</label>
+        <input type="text" id="searchInput" placeholder="Search brand or model...">
+      </div>
+
+      <!-- Filter by Brand -->
+      <div class="filter-group">
+        <label for="brandFilter">Brand</label>
+        <select id="brandFilter">
+          <option value="all">All Brands</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Honda">Honda</option>
+          <option value="BMW">BMW</option>
+          <option value="Audi">Audi</option>
+          <option value="Ford">Ford</option>
+          <option value="Tesla">Tesla</option>
+        </select>
+      </div>
+
+      <!-- Filter by Fuel Type -->
+      <div class="filter-group">
+        <label for="fuelFilter">Fuel Type</label>
+        <select id="fuelFilter">
+          <option value="all">All Types</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Electric">Electric</option>
+          <option value="Hybrid">Hybrid</option>
+        </select>
+      </div>
+
+      <!-- Price Range -->
+      <div class="filter-group">
+        <label for="priceRange">Max Price: <span id="priceValue">$50,000</span></label>
+        <input type="range" id="priceRange" min="20000" max="50000" step="1000" value="50000">
+      </div>
+
+      <!-- Sort -->
+      <div class="filter-group">
+        <label for="sortSelect">Sort By</label>
+        <select id="sortSelect">
+          <option value="default">Default</option>
+          <option value="priceLowHigh">Price: Low to High</option>
+          <option value="priceHighLow">Price: High to Low</option>
+          <option value="yearNewest">Year: Newest First</option>
+        </select>
+      </div>
+
+      <!-- Reset Button -->
+      <button id="resetFilters" class="btn-secondary" type="button">Reset Filters</button>
+    </aside>
+
+    <!-- ===== CAR RESULTS ===== -->
+    <div class="cars-results">
+      <p class="results-count" id="resultsCount">Showing all cars</p>
+
+      <div class="car-grid" id="carsContainer">
+        <!-- JS will fill this with car cards -->
+      </div>
+
+      <!-- Shown when no cars match filters -->
+      <p class="no-results" id="noResults" style="display: none;">
+        No cars match your search. Try adjusting your filters.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Car<span>Zone</span></h3>
+        <p>Your trusted marketplace for buying and selling cars.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 CarZone. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== JavaScript Files ===== -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cars.js"></script>
+</body>
+</html>
