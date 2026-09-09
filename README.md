@@ -58,6 +58,7 @@ I wanted to practice real front-end patterns without leaning on a framework — 
 
 **Adna Muhammad Farooq** — Computer Science student, working toward AI and software engineering.
 
+**LinkedIn:** [linkedin.com/in/adnamuhammadfarooq](https://www.linkedin.com/in/adnamuhammadfarooq)
 GitHub: [Adna-Muhammad-Farooq](https://github.com/Adna-Muhammad-Farooq)
 **Email:** [shinwariadna@gmail.com](mailto:shinwariadna@gmail.com)
 * Email: [adnamuhammadfarooq27@gmail.com](mailto:adnamuhammadfarooq27@gmail.com)
